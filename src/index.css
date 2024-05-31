@@ -1,3 +1,45 @@
 @import 'tailwindcss/dist/base.css';
 @import 'tailwindcss/dist/components.css';
 @import 'tailwindcss/dist/utilities.css';
+
+*{
+    margin: 0;
+    bottom: 0;
+    box-sizing:border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card{
+    display: grid;
+    gap: 0.5rem;
+    justify-items: center;
+    background-color: #43a889;
+    border-radius: 40px;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+section:first{
+    background-color: black;
+}
+
+.card__title, .card__price{
+    color: white;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.card__image{
+    border-radius: 40px;
+}
+
+@media (max-width: 1024px) {
+    .card{
+      grid-template-columns: 1fr;
+    }
+  }
